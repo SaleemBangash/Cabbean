@@ -740,7 +740,7 @@ class _DashboardState extends State<Dashboard> {
                       height: sizeConfig!.height(0.06),
                       width: sizeConfig!.width(0.90),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25.0),
+                          borderRadius: BorderRadius.circular(5.0),
                           border: Border.all(width: 1, color: Colors.white),
                           color: Theme.of(context).primaryColor),
                       child: Row(
@@ -1316,7 +1316,7 @@ class _DashboardState extends State<Dashboard> {
                     decoration: BoxDecoration(
                         border: Border.all(width: 1),
                         color: Color(0xffEBEBEB),
-                        borderRadius: BorderRadius.circular(10.0)),
+                        borderRadius: BorderRadius.circular(5.0)),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text("Add Comments",
@@ -1386,7 +1386,7 @@ class _DashboardState extends State<Dashboard> {
                     height: sizeConfig!.height(0.06),
                     width: sizeConfig!.width(0.90),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25.0),
+                        borderRadius: BorderRadius.circular(5.0),
                         border: Border.all(width: 1, color: Colors.white),
                         color: Theme.of(context).primaryColor),
                     child: Row(

@@ -13,12 +13,15 @@ import 'package:passenger/driver/driver_request_history.dart';
 import 'package:passenger/driver/information.dart';
 import 'package:passenger/driver/main_screen_offline.dart';
 import 'package:passenger/driver/registration/driver_registration.dart';
+import 'package:passenger/driver/registration/driver_registration_screen.dart';
 import 'package:passenger/driver/settings.dart';
 import 'package:passenger/driver/settings_cabbean.dart';
+import 'package:passenger/driver/subscription.dart';
 import 'package:passenger/screens/dashboard.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:passenger/screens/profile.dart';
 import 'package:passenger/screens/safety_screen.dart';
+import 'package:passenger/screens/start_screen.dart';
 import 'package:passenger/widgets/drawer_list.dart';
 
 import '../main.dart';
@@ -132,9 +135,9 @@ class _DriverDrawerState extends State<DriverDrawer> {
               ),
               listTile(
                 icon: Icons.account_box_rounded,
-                title: "Get Subscription",
+                title: "My plan",
                 onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Information())),
+                    MaterialPageRoute(builder: (context) => Subscription())),
               ),
               // DriverDrawerList(
               //     assetName: "assets/pro.png", data: "Get Subscription"),
@@ -170,7 +173,7 @@ class _DriverDrawerState extends State<DriverDrawer> {
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => DriverRegistration())),
+                        builder: (context) => DriverRegistrationScreen())),
               ),
               listTile(
                 icon: Icons.help,
@@ -193,6 +196,12 @@ class _DriverDrawerState extends State<DriverDrawer> {
                     width: sizeConfig!.width(0.52),
                     height: 40,
                     child: MySecondButton(
+                      onTap: (() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => StartScreen()));
+                      }),
                       title: "Switch to Passenger",
                       border: Border.all(width: 1, color: Colors.white),
                       borderRadius: BorderRadius.circular(25.0),

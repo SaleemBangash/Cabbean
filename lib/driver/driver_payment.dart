@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:passenger/driver/main_screen_offline.dart';
+import 'package:passenger/driver/main_screen_online.dart';
 import 'package:passenger/screens/accept.dart';
 import 'package:passenger/screens/dashboard.dart';
 import 'package:passenger/screens/low_rated.dart';
@@ -37,7 +38,7 @@ class _DriverPaymentState extends State<DriverPayment> {
           icon: Icon(Icons.arrow_back, color: Theme.of(context).primaryColor),
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => MainScreenOffine()));
+                MaterialPageRoute(builder: (context) => MainScreenOnline()));
           }
           //onPressed: () => Navigator.of(context).pop(),
           ),

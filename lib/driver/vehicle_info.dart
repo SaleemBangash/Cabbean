@@ -48,7 +48,7 @@ class _VehicleInformationState extends State<VehicleInformation> {
           ),
       data: Text(
         'Vehicle Information',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.white, fontSize: 16),
       ),
       body: Container(
         margin: EdgeInsets.only(top: 20),
@@ -61,11 +61,23 @@ class _VehicleInformationState extends State<VehicleInformation> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 10),
-                    Text("Car",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("Car Make",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     Container(
                       // margin: EdgeInsets.all(19),
@@ -123,11 +135,23 @@ class _VehicleInformationState extends State<VehicleInformation> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text("Car No",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("Car No",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     SizedBox(
                       width: sizeConfig!.width(0.90),
@@ -154,11 +178,23 @@ class _VehicleInformationState extends State<VehicleInformation> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text("Car Front",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("Car Front",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     Container(
                       height: 50,
@@ -209,11 +245,23 @@ class _VehicleInformationState extends State<VehicleInformation> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text("Car Back",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("Car Back",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     Container(
                       height: 50,
@@ -270,11 +318,23 @@ class _VehicleInformationState extends State<VehicleInformation> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Model Number",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyText2!
-                                    .copyWith(fontWeight: FontWeight.bold)),
+                            Row(
+                              children: [
+                                Text("Model Number",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontWeight: FontWeight.bold)),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 10),
+                                  child: Icon(
+                                    FontAwesomeIcons.asterisk,
+                                    size: 15,
+                                    color: Colors.red,
+                                  ),
+                                )
+                              ],
+                            ),
                             SizedBox(
                               height: 10,
                             ),
@@ -285,6 +345,7 @@ class _VehicleInformationState extends State<VehicleInformation> {
                                 suffixIcon: Icon(Icons.calendar_month,
                                     color: Theme.of(context).primaryColor),
                                 hintText: "12/22",
+                                hintStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5.0)),
                                 filled: true,
@@ -300,11 +361,24 @@ class _VehicleInformationState extends State<VehicleInformation> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text("Model Year",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(fontWeight: FontWeight.bold)),
+                                Row(
+                                  children: [
+                                    Text("Model Year",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2!
+                                            .copyWith(
+                                                fontWeight: FontWeight.bold)),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 10),
+                                      child: Icon(
+                                        FontAwesomeIcons.asterisk,
+                                        size: 15,
+                                        color: Colors.red,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ],
                             ),
                             SizedBox(
@@ -408,20 +482,20 @@ class _VehicleInformationState extends State<VehicleInformation> {
             content: SingleChildScrollView(
               child: ListBody(
                 children: [
-                  Divider(
-                    height: 1,
-                    color: Colors.blue,
-                  ),
-                  ListTile(
-                    onTap: () {
-                      _openGallery(context);
-                    },
-                    title: Text("Gallery"),
-                    leading: Icon(
-                      Icons.account_box,
-                      color: Colors.blue,
-                    ),
-                  ),
+                  // Divider(
+                  //   height: 1,
+                  //   color: Colors.blue,
+                  // ),
+                  // ListTile(
+                  //   onTap: () {
+                  //     _openGallery(context);
+                  //   },
+                  //   title: Text("Gallery"),
+                  //   leading: Icon(
+                  //     Icons.account_box,
+                  //     color: Colors.blue,
+                  //   ),
+                  // ),
                   Divider(
                     height: 1,
                     color: Colors.blue,
@@ -479,20 +553,20 @@ class _VehicleInformationState extends State<VehicleInformation> {
             content: SingleChildScrollView(
               child: ListBody(
                 children: [
-                  Divider(
-                    height: 1,
-                    color: Colors.blue,
-                  ),
-                  ListTile(
-                    onTap: () {
-                      _openGallery(context);
-                    },
-                    title: Text("Gallery"),
-                    leading: Icon(
-                      Icons.account_box,
-                      color: Colors.blue,
-                    ),
-                  ),
+                  // Divider(
+                  //   height: 1,
+                  //   color: Colors.blue,
+                  // ),
+                  // ListTile(
+                  //   onTap: () {
+                  //     _openGallery(context);
+                  //   },
+                  //   title: Text("Gallery"),
+                  //   leading: Icon(
+                  //     Icons.account_box,
+                  //     color: Colors.blue,
+                  //   ),
+                  // ),
                   Divider(
                     height: 1,
                     color: Colors.blue,

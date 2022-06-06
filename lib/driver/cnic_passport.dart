@@ -44,7 +44,7 @@ class _CnicPassportState extends State<CnicPassport> {
           ),
       data: Text(
         'CNIC/Passport',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.white, fontSize: 16),
       ),
       body: Container(
         margin: EdgeInsets.only(top: 20),
@@ -57,11 +57,26 @@ class _CnicPassportState extends State<CnicPassport> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("First Name",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyText2!
-                              .copyWith(fontWeight: FontWeight.bold)),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Row(
+                          children: [
+                            Text("First Name",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText2!
+                                    .copyWith(fontWeight: FontWeight.bold)),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Icon(
+                                FontAwesomeIcons.asterisk,
+                                size: 15,
+                                color: Colors.red,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
                       SizedBox(
                         height: 10,
                       ),
@@ -70,6 +85,7 @@ class _CnicPassportState extends State<CnicPassport> {
                         height: 30,
                         child: MyTextField(
                           hintText: "First Name",
+                          hintStyle: TextStyle(fontSize: 14),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0)),
                           filled: true,
@@ -82,13 +98,20 @@ class _CnicPassportState extends State<CnicPassport> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text("Last Name",
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText2!
                                   .copyWith(fontWeight: FontWeight.bold)),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Icon(
+                              FontAwesomeIcons.asterisk,
+                              size: 15,
+                              color: Colors.red,
+                            ),
+                          )
                         ],
                       ),
                       SizedBox(
@@ -98,7 +121,8 @@ class _CnicPassportState extends State<CnicPassport> {
                         width: sizeConfig!.width(0.40),
                         height: 30,
                         child: MyTextField(
-                          hintText: "LastName",
+                          hintText: "Last Name",
+                          hintStyle: TextStyle(fontSize: 14),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0)),
                           filled: true,
@@ -115,18 +139,31 @@ class _CnicPassportState extends State<CnicPassport> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("CNIC",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("CNIC# ",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     SizedBox(
                       width: sizeConfig!.width(0.90),
                       height: 40,
                       child: MyTextField(
                         inputType: TextInputType.emailAddress,
-                        hintText: "CNIC No",
+                        hintText: "CNIC#",
+                        hintStyle: TextStyle(fontSize: 14),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0)),
                         filled: true,
@@ -135,11 +172,23 @@ class _CnicPassportState extends State<CnicPassport> {
                       ),
                     ),
                     SizedBox(height: 10),
-                    Text("CNIC Front",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("Cnic Front",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     Container(
                       height: 50,
@@ -190,11 +239,23 @@ class _CnicPassportState extends State<CnicPassport> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text("CNIC Back",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("Cnic Back",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     Container(
                       height: 50,
@@ -251,11 +312,23 @@ class _CnicPassportState extends State<CnicPassport> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Date Of Issue",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyText2!
-                                    .copyWith(fontWeight: FontWeight.bold)),
+                            Row(
+                              children: [
+                                Text("Date of issue",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontWeight: FontWeight.bold)),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 10),
+                                  child: Icon(
+                                    FontAwesomeIcons.asterisk,
+                                    size: 15,
+                                    color: Colors.red,
+                                  ),
+                                )
+                              ],
+                            ),
                             SizedBox(
                               height: 10,
                             ),
@@ -281,11 +354,24 @@ class _CnicPassportState extends State<CnicPassport> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text("Date of Expiry",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(fontWeight: FontWeight.bold)),
+                                Row(
+                                  children: [
+                                    Text("Date of Expiry",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2!
+                                            .copyWith(
+                                                fontWeight: FontWeight.bold)),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 10),
+                                      child: Icon(
+                                        FontAwesomeIcons.asterisk,
+                                        size: 15,
+                                        color: Colors.red,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ],
                             ),
                             SizedBox(
@@ -350,20 +436,20 @@ class _CnicPassportState extends State<CnicPassport> {
             content: SingleChildScrollView(
               child: ListBody(
                 children: [
-                  Divider(
-                    height: 1,
-                    color: Colors.blue,
-                  ),
-                  ListTile(
-                    onTap: () {
-                      _openGallery(context);
-                    },
-                    title: Text("Gallery"),
-                    leading: Icon(
-                      Icons.account_box,
-                      color: Colors.blue,
-                    ),
-                  ),
+                  // Divider(
+                  //   height: 1,
+                  //   color: Colors.blue,
+                  // ),
+                  // ListTile(
+                  //   onTap: () {
+                  //     _openGallery(context);
+                  //   },
+                  //   title: Text("Gallery"),
+                  //   leading: Icon(
+                  //     Icons.account_box,
+                  //     color: Colors.blue,
+                  //   ),
+                  // ),
                   Divider(
                     height: 1,
                     color: Colors.blue,
@@ -421,20 +507,20 @@ class _CnicPassportState extends State<CnicPassport> {
             content: SingleChildScrollView(
               child: ListBody(
                 children: [
-                  Divider(
-                    height: 1,
-                    color: Colors.blue,
-                  ),
-                  ListTile(
-                    onTap: () {
-                      _openGallery(context);
-                    },
-                    title: Text("Gallery"),
-                    leading: Icon(
-                      Icons.account_box,
-                      color: Colors.blue,
-                    ),
-                  ),
+                  // Divider(
+                  //   height: 1,
+                  //   color: Colors.blue,
+                  // ),
+                  // ListTile(
+                  //   onTap: () {
+                  //     _openGallery(context);
+                  //   },
+                  //   title: Text("Gallery"),
+                  //   leading: Icon(
+                  //     Icons.account_box,
+                  //     color: Colors.blue,
+                  //   ),
+                  // ),
                   Divider(
                     height: 1,
                     color: Colors.blue,

@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:passenger/driver/information.dart';
+import 'package:passenger/driver/main_screen_online.dart';
 
 import '../../main.dart';
 import '../../widgets/second_button.dart';
@@ -285,10 +287,8 @@ class _SubscriptionState extends State<Subscription> {
       data: Text(""),
       leading: GestureDetector(
           onTap: (() {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => ClearanceCertificate()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => MainScreenOnline()));
           }),
           child: Icon(
             Icons.arrow_back_ios,
@@ -300,7 +300,7 @@ class _SubscriptionState extends State<Subscription> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Get Subscribe",
+              "My plan",
               style: Theme.of(context).textTheme.bodyText2!.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
@@ -309,7 +309,7 @@ class _SubscriptionState extends State<Subscription> {
             SizedBox(
               height: 20,
             ),
-            Image.asset("assets/pro_1.png"),
+            Image.asset("assets/cab_icon.png"),
             SizedBox(
               height: 20,
             ),
@@ -367,7 +367,7 @@ class _SubscriptionState extends State<Subscription> {
               child: MySecondButton(
                 border: Border.all(width: 1, color: Colors.white),
                 onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Subscription())),
+                    MaterialPageRoute(builder: (context) => Information())),
                 title: "Subscribe",
                 borderRadius: BorderRadius.circular(25.0),
               ),

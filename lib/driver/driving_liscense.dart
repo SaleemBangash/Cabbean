@@ -44,7 +44,7 @@ class _DrivingLicenseState extends State<DrivingLicense> {
           ),
       data: Text(
         'Driving License',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.white, fontSize: 16),
       ),
       actions: [
         IconButton(
@@ -66,17 +66,30 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("License No",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("Liscense No",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     SizedBox(
                       width: sizeConfig!.width(0.90),
                       height: 40,
                       child: MyTextField(
                         inputType: TextInputType.emailAddress,
+                        hintStyle: TextStyle(fontSize: 14),
                         hintText: "Driving Lisence No",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0)),
@@ -95,11 +108,23 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                               fontSize: 12)),
                     ),
                     SizedBox(height: 10),
-                    Text("City of Registration",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("City Of Registration",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     Container(
                       // margin: EdgeInsets.all(19),
@@ -157,11 +182,23 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text("License Front",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("Lisence Front",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     Container(
                       height: 50,
@@ -212,11 +249,23 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text("Lisence Back",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text("Lisence Back",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(height: 10),
                     Container(
                       height: 50,
@@ -273,11 +322,23 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Date Of Issue",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyText2!
-                                    .copyWith(fontWeight: FontWeight.bold)),
+                            Row(
+                              children: [
+                                Text("Date Of Issue",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontWeight: FontWeight.bold)),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 10),
+                                  child: Icon(
+                                    FontAwesomeIcons.asterisk,
+                                    size: 15,
+                                    color: Colors.red,
+                                  ),
+                                )
+                              ],
+                            ),
                             SizedBox(
                               height: 10,
                             ),
@@ -285,6 +346,7 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                               width: sizeConfig!.width(0.42),
                               height: 30,
                               child: MyTextField(
+                                hintStyle: TextStyle(fontSize: 14),
                                 suffixIcon: Icon(Icons.calendar_month,
                                     color: Theme.of(context).primaryColor),
                                 hintText: "12/22",
@@ -303,11 +365,24 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text("Date of Expiration",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(fontWeight: FontWeight.bold)),
+                                Row(
+                                  children: [
+                                    Text("Date of Expiration",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2!
+                                            .copyWith(
+                                                fontWeight: FontWeight.bold)),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 10),
+                                      child: Icon(
+                                        FontAwesomeIcons.asterisk,
+                                        size: 15,
+                                        color: Colors.red,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ],
                             ),
                             SizedBox(
@@ -317,6 +392,7 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                               width: sizeConfig!.width(0.42),
                               height: 30,
                               child: MyTextField(
+                                hintStyle: TextStyle(fontSize: 14),
                                 suffixIcon: Icon(Icons.calendar_month,
                                     color: Theme.of(context).primaryColor),
                                 hintText: "12/22",

@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:passenger/driver/accept_offer_one.dart';
+import 'package:passenger/driver/google_map/google_map_page.dart';
+import 'package:passenger/driver/google_map/landing_map.dart';
 import 'package:passenger/driver/main_screen_online.dart';
 import 'package:passenger/screens/broadcast.dart';
 import 'package:passenger/screens/comment.dart';
@@ -17,6 +19,7 @@ import 'package:passenger/widgets/new_appbar.dart';
 
 import '../main.dart';
 import '../screens/rating.dart';
+import '../utils/size_config.dart';
 import '../widgets/second_button.dart';
 import '../widgets/text_field.dart';
 // import 'reg_otp.dart';
@@ -29,6 +32,12 @@ class AccepDriverOffer extends StatefulWidget {
 }
 
 class _AccepDriverOfferState extends State<AccepDriverOffer> {
+  @override
+  void didChangeDependencies() {
+    sizeConfig = SizeConfig.init(context);
+    super.didChangeDependencies();
+  }
+
   int charLength = 0;
 
   _onChanged(String value) {
@@ -73,12 +82,13 @@ class _AccepDriverOfferState extends State<AccepDriverOffer> {
       // backgroundColor: Colors.grey,
       body: Stack(
         children: [
-          Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-            image: AssetImage("assets/map.png"),
-            fit: BoxFit.cover,
-          ))),
+          MapOne(),
+          // Container(
+          //     decoration: BoxDecoration(
+          //         image: DecorationImage(
+          //   image: AssetImage("assets/map.png"),
+          //   fit: BoxFit.cover,
+          // ))),
           // Positioned(
           //   top: 40,
           //   child: GestureDetector(
@@ -100,7 +110,7 @@ class _AccepDriverOfferState extends State<AccepDriverOffer> {
               bottom: sizeConfig!.height(0.029),
               left: sizeConfig!.width(0.10),
               child: SizedBox(
-                width: sizeConfig!.width(0.82),
+                width: sizeConfig!.width(0.72),
                 height: 50,
                 child: MySecondButton(
                   border: Border.all(width: 1, color: Colors.white),

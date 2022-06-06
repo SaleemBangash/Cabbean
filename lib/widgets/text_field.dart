@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 class MyTextField extends StatelessWidget {
   final String? hintText;
   final void Function(String)? onChanged;
+  final TextStyle? hintStyle;
   final InputBorder? focusedBorder;
   final InputBorder? enabledBorder;
   final InputBorder? disabledBorder;
@@ -51,6 +52,7 @@ class MyTextField extends StatelessWidget {
     this.enabledBorder,
     this.disabledBorder,
     this.errorBorder,
+    this.hintStyle,
     //  required this.onValidate,
     // required MultiValidator validator,
   }) : super(key: key);
@@ -76,7 +78,7 @@ class MyTextField extends StatelessWidget {
             label: label,
             labelStyle:
                 TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-            hintStyle: TextStyle(color: Colors.black),
+            hintStyle: TextStyle(color: Colors.black, fontSize: 14),
             filled: filled,
             labelText: labelText,
             fillColor: Colors.grey[200],

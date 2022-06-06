@@ -97,6 +97,11 @@ class _NewRegistrationState extends State<NewRegistration> {
                                   .textTheme
                                   .bodyText2!
                                   .copyWith(fontWeight: FontWeight.bold)),
+                          Icon(
+                            FontAwesomeIcons.asterisk,
+                            size: 15,
+                            color: Colors.red,
+                          ),
                         ],
                       ),
                       SizedBox(
@@ -106,7 +111,7 @@ class _NewRegistrationState extends State<NewRegistration> {
                         width: sizeConfig!.width(0.40),
                         height: 30,
                         child: MyTextField(
-                          hintText: "LastName",
+                          hintText: "Last Name",
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0)),
                           filled: true,
@@ -577,11 +582,16 @@ class _NewRegistrationState extends State<NewRegistration> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text("Date of Expiry",
+                                Text("Date Of Expiry",
                                     style: Theme.of(context)
                                         .textTheme
                                         .bodyText2!
                                         .copyWith(fontWeight: FontWeight.bold)),
+                                Icon(
+                                  FontAwesomeIcons.asterisk,
+                                  size: 15,
+                                  color: Colors.red,
+                                ),
                               ],
                             ),
                             SizedBox(

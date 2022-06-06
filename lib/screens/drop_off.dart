@@ -59,7 +59,7 @@ class DropOff extends StatelessWidget {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsets.only(left: 90, top: 10, bottom: 10),
+                        const EdgeInsets.only(left: 50, top: 10, bottom: 10),
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(context,
@@ -88,7 +88,7 @@ class DropOff extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => DropOff()));
               },
               child: Text(
-                'Shams Abad,Rwp',
+                'Shams Abad, Rwp',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),

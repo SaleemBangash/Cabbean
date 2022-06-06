@@ -3,6 +3,8 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:passenger/driver/main_screen_online.dart';
+import 'package:passenger/driver/registration/driver_reg_otp.dart';
 import 'package:passenger/screens/reg_otp.dart';
 import 'package:passenger/screens/start_screen.dart';
 import 'package:passenger/widgets/app_bar.dart';
@@ -32,7 +34,7 @@ class _DriverRegistrationScreenState extends State<DriverRegistrationScreen> {
       leading: GestureDetector(
           onTap: (() {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => StartScreen()));
+                MaterialPageRoute(builder: (context) => MainScreenOnline()));
           }),
           child: Icon(
             Icons.arrow_back,
@@ -148,7 +150,7 @@ class _DriverRegistrationScreenState extends State<DriverRegistrationScreen> {
                         onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => RegistrationOtp())),
+                                builder: (context) => DriverRegistrationOtp())),
                         title: "Register",
                         borderRadius: BorderRadius.circular(25.0),
                       ),
@@ -174,12 +176,12 @@ class _DriverRegistrationScreenState extends State<DriverRegistrationScreen> {
                             });
                           },
                         ),
-                        Text("By Signing in You agree to Our",
+                        Text("By Signing in, You agree to Our",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12)),
-                        Text("Terms and Conditions",
+                        Text("Terms & Conditions",
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 color: Colors.white,

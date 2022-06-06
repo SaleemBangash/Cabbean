@@ -1,9 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:passenger/driver/main_screen_offline.dart';
 import 'package:passenger/main.dart';
 import 'package:passenger/widgets/app_bar.dart';
+
+import 'main_screen_online.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -13,6 +16,7 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
+  bool isToggled = false;
   @override
   Widget build(BuildContext context) {
     return MyAppBar(
@@ -20,7 +24,7 @@ class _SettingsState extends State<Settings> {
       leading: GestureDetector(
         onTap: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => MainScreenOffine()));
+              MaterialPageRoute(builder: (context) => MainScreenOnline()));
         },
         child: Icon(
           Icons.arrow_back,
@@ -55,7 +59,23 @@ class _SettingsState extends State<Settings> {
                           "24-Hour Time",
                           style: TextStyle(color: Colors.black, fontSize: 15),
                         ),
-                        Image.asset("assets/toggle_fil.png")
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: FlutterSwitch(
+                            height: 25.0,
+                            width: 45.0,
+                            padding: 4.0,
+                            toggleSize: 20.0,
+                            borderRadius: 15.0,
+                            activeColor: Theme.of(context).primaryColor,
+                            value: isToggled,
+                            onToggle: (value) {
+                              setState(() {
+                                isToggled = !isToggled;
+                              });
+                            },
+                          ),
+                        ),
                       ],
                     ),
                   ),

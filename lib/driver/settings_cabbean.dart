@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:passenger/driver/main_screen_offline.dart';
+import 'package:passenger/driver/main_screen_online.dart';
 import 'package:passenger/main.dart';
 import 'package:passenger/widgets/app_bar.dart';
 
@@ -20,7 +21,7 @@ class _CabbeanSettingsState extends State<CabbeanSettings> {
       leading: GestureDetector(
         onTap: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => MainScreenOffine()));
+              MaterialPageRoute(builder: (context) => MainScreenOnline()));
         },
         child: Icon(
           Icons.arrow_back,

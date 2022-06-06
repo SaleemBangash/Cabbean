@@ -1,17 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+//ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:passenger/driver/main_screen_online.dart';
-import 'package:passenger/screens/dashboard.dart';
-import 'package:passenger/screens/registration_screen.dart';
+
 import 'package:passenger/widgets/app_bar.dart';
-
-import '../../main.dart';
-import '../../screens/rating.dart';
-import '../../widgets/second_button.dart';
-
-// import 'dashboard.dart';
-// import 'set_destination.dart';
 
 class Monthly extends StatefulWidget {
   const Monthly({Key? key}) : super(key: key);

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:passenger/driver/accept_offer.dart';
 import 'package:passenger/driver/main_screen_offline.dart';
 import 'package:passenger/screens/accept.dart';
@@ -12,10 +13,17 @@ import '../screens/rating.dart';
 import '../widgets/second_button.dart';
 import 'driver_drawer.dart';
 import 'driver_ratings.dart';
+import 'main_screen_online.dart';
 
-class Chat extends StatelessWidget {
+class Chat extends StatefulWidget {
   const Chat({Key? key}) : super(key: key);
 
+  @override
+  State<Chat> createState() => _ChatState();
+}
+
+class _ChatState extends State<Chat> {
+  bool isToggled = false;
   @override
   Widget build(BuildContext context) {
     return MyAppBar(
@@ -25,7 +33,25 @@ class Chat extends StatelessWidget {
         color: Colors.white,
       ),
       drawer: DriverDrawer(),
-      actions: [Image.asset("assets/toggle_fil.png")],
+      actions: [
+        Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: FlutterSwitch(
+            height: 25.0,
+            width: 45.0,
+            padding: 4.0,
+            toggleSize: 20.0,
+            borderRadius: 15.0,
+            activeColor: Theme.of(context).primaryColor,
+            value: isToggled,
+            onToggle: (value) {
+              setState(() {
+                isToggled = !isToggled;
+              });
+            },
+          ),
+        ),
+      ],
       data: Text(""),
       body: Center(
           child: Container(
@@ -262,7 +288,7 @@ class Chat extends StatelessWidget {
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => MainScreenOffine())),
+                        builder: (context) => MainScreenOnline())),
                 child: Image.asset("assets/my_rides.png")),
           ),
           BottomNavigationBarItem(

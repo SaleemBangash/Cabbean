@@ -10,6 +10,7 @@ import 'package:passenger/widgets/app_bar.dart';
 
 import '../main.dart';
 import 'accept_offer.dart';
+import 'google_map/google_map_page.dart';
 
 class acceptOfferOne extends StatefulWidget {
   const acceptOfferOne({Key? key}) : super(key: key);
@@ -88,12 +89,13 @@ class _acceptOfferOneState extends State<acceptOfferOne>
       ),
       data: Text(''),
       body: Stack(children: [
-        Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-          image: AssetImage("assets/map.png"),
-          fit: BoxFit.cover,
-        ))),
+        MapOne(),
+        // Container(
+        //     decoration: BoxDecoration(
+        //         image: DecorationImage(
+        //   image: AssetImage("assets/map.png"),
+        //   fit: BoxFit.cover,
+        // ))),
         Center(
           child: Positioned(
             top: sizeConfig!.height(0.23),

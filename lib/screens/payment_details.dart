@@ -642,7 +642,7 @@ class _PaymentDetailsState extends State<PaymentDetails> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              "Cabbean Details",
+                              "Cabbean",
                               style: TextStyle(
                                   color: Theme.of(context).primaryColor,
                                   fontSize: 18),
@@ -834,7 +834,7 @@ class _PaymentDetailsState extends State<PaymentDetails> {
                                   shape: BoxShape.circle,
                                   color: Theme.of(context).primaryColor),
                             ),
-                            Text("ShamsAbad,Metro Station",
+                            Text("ShamsAbad, Metro Station",
                                 style: TextStyle(color: Colors.white)),
                           ],
                         ),

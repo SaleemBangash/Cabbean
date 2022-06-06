@@ -173,12 +173,12 @@ class _RegistrationState extends State<Registration> {
                             });
                           },
                         ),
-                        Text("By Signing in You agree to Our",
+                        Text("By Signing in, You agree to Our",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12)),
-                        Text("Terms and Conditions",
+                        Text("Terms & Conditions",
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 color: Colors.white,

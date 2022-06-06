@@ -9,6 +9,7 @@ import 'package:passenger/widgets/app_bar.dart';
 import '../main.dart';
 import '../screens/rating.dart';
 import '../widgets/second_button.dart';
+import 'main_screen_online.dart';
 
 // import 'dashboard.dart';
 // import 'set_destination.dart';
@@ -29,7 +30,7 @@ class _DriverRequestHistoryState extends State<DriverRequestHistory> {
           icon: Icon(Icons.arrow_back, color: Theme.of(context).primaryColor),
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => MainScreenOffine()));
+                MaterialPageRoute(builder: (context) => MainScreenOnline()));
           }
           //onPressed: () => Navigator.of(context).pop(),
           ),

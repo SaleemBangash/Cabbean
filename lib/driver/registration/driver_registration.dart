@@ -3,15 +3,22 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:passenger/driver/accept_offer.dart';
+import 'package:passenger/driver/cnic_passport.dart';
+import 'package:passenger/driver/driving_liscense.dart';
+import 'package:passenger/driver/information.dart';
 import 'package:passenger/driver/main_screen_offline.dart';
+import 'package:passenger/driver/main_screen_online.dart';
 import 'package:passenger/driver/new_chat/daily.dart';
 import 'package:passenger/driver/new_chat/monthly.dart';
 import 'package:passenger/driver/new_chat/weekly.dart';
+import 'package:passenger/driver/vehicle_info.dart';
 import 'package:passenger/screens/accept.dart';
 import 'package:passenger/widgets/app_bar.dart';
 
 import '../../main.dart';
 import '../../widgets/second_button.dart';
+import '../clearance_cert.dart';
+import 'driver_reg_otp.dart';
 
 // import '../main.dart';
 // import '../screens/dashboard.dart';
@@ -41,14 +48,16 @@ class _DriverRegistrationState extends State<DriverRegistration> {
       leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => MainScreenOffine()));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => DriverRegistrationOtp()));
           }
           //onPressed: () => Navigator.of(context).pop(),
           ),
       data: Text(
         'Registration',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.white, fontSize: 16),
       ),
       body: Container(
           // margin: EdgeInsets.only(top: 20),
@@ -68,7 +77,7 @@ class _DriverRegistrationState extends State<DriverRegistration> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Weekly()));
+                                  builder: (context) => Information()));
                         },
                         child: Container(
                           height: 50,
@@ -85,7 +94,7 @@ class _DriverRegistrationState extends State<DriverRegistration> {
                                 Row(
                                   children: [
                                     Text(
-                                      "1.Personel Information",
+                                      "1. Personel Information",
                                       style: Theme.of(context)
                                           .textTheme
                                           .bodyText2!
@@ -126,218 +135,263 @@ class _DriverRegistrationState extends State<DriverRegistration> {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
-                      Container(
-                        height: 50,
-                        width: 330,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "2.Driver Liscense",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(fontWeight: FontWeight.bold),
-                                  ),
-                                  Icon(
-                                    FontAwesomeIcons.asterisk,
-                                    color: Colors.red,
-                                    size: 15,
-                                  )
-                                ],
-                              ),
-                              Checkbox(
-                                // side: BorderSide(color: Colors.white),
-                                checkColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0)),
-                                activeColor: Colors.green,
-                                // shape: RoundedRectangleBorder(
-                                //     borderRadius: BorderRadius.circular(20)),
-                                value: bChecked,
-                                onChanged: (bool? value) {
-                                  setState(() {
-                                    bChecked = value!;
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DrivingLicense()));
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 330,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10.0)),
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 8.0, right: 8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      "2. Driver Liscense",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2!
+                                          .copyWith(
+                                              fontWeight: FontWeight.bold),
+                                    ),
+                                    Icon(
+                                      FontAwesomeIcons.asterisk,
+                                      color: Colors.red,
+                                      size: 15,
+                                    )
+                                  ],
+                                ),
+                                Checkbox(
+                                  // side: BorderSide(color: Colors.white),
+                                  checkColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(20.0)),
+                                  activeColor: Colors.green,
+                                  // shape: RoundedRectangleBorder(
+                                  //     borderRadius: BorderRadius.circular(20)),
+                                  value: bChecked,
+                                  onChanged: (bool? value) {
+                                    setState(() {
+                                      bChecked = value!;
 
-                                    // aChecked = false;
-                                    // cChecked = false;
-                                    // dChecked = false;
-                                    // eChecked = false;
-                                  });
-                                },
-                              )
-                            ],
+                                      // aChecked = false;
+                                      // cChecked = false;
+                                      // dChecked = false;
+                                      // eChecked = false;
+                                    });
+                                  },
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
-                      Container(
-                        height: 50,
-                        width: 330,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "3.CNIC Confirmation",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(fontWeight: FontWeight.bold),
-                                  ),
-                                  Icon(
-                                    FontAwesomeIcons.asterisk,
-                                    color: Colors.red,
-                                    size: 15,
-                                  )
-                                ],
-                              ),
-                              Checkbox(
-                                // side: BorderSide(color: Colors.white),
-                                checkColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0)),
-                                activeColor: Colors.green,
-                                // shape: RoundedRectangleBorder(
-                                //     borderRadius: BorderRadius.circular(20)),
-                                value: cChecked,
-                                onChanged: (bool? value) {
-                                  setState(() {
-                                    cChecked = value!;
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CnicPassport()));
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 330,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10.0)),
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 8.0, right: 8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      "3. CNIC# Confirmation",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2!
+                                          .copyWith(
+                                              fontWeight: FontWeight.bold),
+                                    ),
+                                    Icon(
+                                      FontAwesomeIcons.asterisk,
+                                      color: Colors.red,
+                                      size: 15,
+                                    )
+                                  ],
+                                ),
+                                Checkbox(
+                                  // side: BorderSide(color: Colors.white),
+                                  checkColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(20.0)),
+                                  activeColor: Colors.green,
+                                  // shape: RoundedRectangleBorder(
+                                  //     borderRadius: BorderRadius.circular(20)),
+                                  value: cChecked,
+                                  onChanged: (bool? value) {
+                                    setState(() {
+                                      cChecked = value!;
 
-                                    // aChecked = false;
-                                    // cChecked = false;
-                                    // dChecked = false;
-                                    // eChecked = false;
-                                  });
-                                },
-                              )
-                            ],
+                                      // aChecked = false;
+                                      // cChecked = false;
+                                      // dChecked = false;
+                                      // eChecked = false;
+                                    });
+                                  },
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
-                      Container(
-                        height: 50,
-                        width: 330,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "4.Vehicle Information",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(fontWeight: FontWeight.bold),
-                                  ),
-                                  Icon(
-                                    FontAwesomeIcons.asterisk,
-                                    color: Colors.red,
-                                    size: 15,
-                                  )
-                                ],
-                              ),
-                              Checkbox(
-                                // side: BorderSide(color: Colors.white),
-                                checkColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0)),
-                                activeColor: Colors.green,
-                                // shape: RoundedRectangleBorder(
-                                //     borderRadius: BorderRadius.circular(20)),
-                                value: dChecked,
-                                onChanged: (bool? value) {
-                                  setState(() {
-                                    dChecked = value!;
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => VehicleInformation()));
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 330,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10.0)),
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 8.0, right: 8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      "4. Vehicle Information",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2!
+                                          .copyWith(
+                                              fontWeight: FontWeight.bold),
+                                    ),
+                                    Icon(
+                                      FontAwesomeIcons.asterisk,
+                                      color: Colors.red,
+                                      size: 15,
+                                    )
+                                  ],
+                                ),
+                                Checkbox(
+                                  // side: BorderSide(color: Colors.white),
+                                  checkColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(20.0)),
+                                  activeColor: Colors.green,
+                                  // shape: RoundedRectangleBorder(
+                                  //     borderRadius: BorderRadius.circular(20)),
+                                  value: dChecked,
+                                  onChanged: (bool? value) {
+                                    setState(() {
+                                      dChecked = value!;
 
-                                    // aChecked = false;
-                                    // cChecked = false;
-                                    // dChecked = false;
-                                    // eChecked = false;
-                                  });
-                                },
-                              )
-                            ],
+                                      // aChecked = false;
+                                      // cChecked = false;
+                                      // dChecked = false;
+                                      // eChecked = false;
+                                    });
+                                  },
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
                       ),
-                      Container(
-                        height: 50,
-                        width: 330,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "5.Clearance Certificate",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(fontWeight: FontWeight.bold),
-                                  ),
-                                  Icon(
-                                    FontAwesomeIcons.asterisk,
-                                    color: Colors.red,
-                                    size: 15,
-                                  )
-                                ],
-                              ),
-                              Checkbox(
-                                // side: BorderSide(color: Colors.white),
-                                checkColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0)),
-                                activeColor: Colors.green,
-                                // shape: RoundedRectangleBorder(
-                                //     borderRadius: BorderRadius.circular(20)),
-                                value: fChecked,
-                                onChanged: (bool? value) {
-                                  setState(() {
-                                    fChecked = value!;
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      ClearanceCertificate()));
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 330,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10.0)),
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(left: 8.0, right: 8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      "5. Clearance Certificate",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2!
+                                          .copyWith(
+                                              fontWeight: FontWeight.bold),
+                                    ),
+                                    Icon(
+                                      FontAwesomeIcons.asterisk,
+                                      color: Colors.red,
+                                      size: 15,
+                                    )
+                                  ],
+                                ),
+                                Checkbox(
+                                  // side: BorderSide(color: Colors.white),
+                                  checkColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(20.0)),
+                                  activeColor: Colors.green,
+                                  // shape: RoundedRectangleBorder(
+                                  //     borderRadius: BorderRadius.circular(20)),
+                                  value: fChecked,
+                                  onChanged: (bool? value) {
+                                    setState(() {
+                                      fChecked = value!;
 
-                                    // aChecked = false;
-                                    // cChecked = false;
-                                    // dChecked = false;
-                                    // eChecked = false;
-                                  });
-                                },
-                              )
-                            ],
+                                      // aChecked = false;
+                                      // cChecked = false;
+                                      // dChecked = false;
+                                      // eChecked = false;
+                                    });
+                                  },
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),

@@ -49,7 +49,7 @@ class _ClearanceCertificateState extends State<ClearanceCertificate> {
           ),
       data: Text(
         'Clearance Certificate',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.white, fontSize: 16),
       ),
       body: Container(
         margin: EdgeInsets.only(top: 20),
@@ -65,11 +65,23 @@ class _ClearanceCertificateState extends State<ClearanceCertificate> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 10),
-                      Text("Clearance Certificate",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyText2!
-                              .copyWith(fontWeight: FontWeight.bold)),
+                      Row(
+                        children: [
+                          Text("Clearance Certificate",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText2!
+                                  .copyWith(fontWeight: FontWeight.bold)),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Icon(
+                              FontAwesomeIcons.asterisk,
+                              size: 15,
+                              color: Colors.red,
+                            ),
+                          )
+                        ],
+                      ),
                       SizedBox(height: 10),
                       Container(
                         height: 50,
@@ -120,11 +132,23 @@ class _ClearanceCertificateState extends State<ClearanceCertificate> {
                       SizedBox(
                         height: 10,
                       ),
-                      Text("Clearance Certificate",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyText2!
-                              .copyWith(fontWeight: FontWeight.bold)),
+                      Row(
+                        children: [
+                          Text("Clearance Certificate",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText2!
+                                  .copyWith(fontWeight: FontWeight.bold)),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Icon(
+                              FontAwesomeIcons.asterisk,
+                              size: 15,
+                              color: Colors.red,
+                            ),
+                          )
+                        ],
+                      ),
                       SizedBox(height: 10),
                       Container(
                         height: 50,
@@ -218,20 +242,21 @@ class _ClearanceCertificateState extends State<ClearanceCertificate> {
             content: SingleChildScrollView(
               child: ListBody(
                 children: [
-                  Divider(
-                    height: 1,
-                    color: Colors.blue,
-                  ),
-                  ListTile(
-                    onTap: () {
-                      _openGallery(context);
-                    },
-                    title: Text("Gallery"),
-                    leading: Icon(
-                      Icons.account_box,
-                      color: Colors.blue,
-                    ),
-                  ),
+                  // Divider(
+                  //   height: 1,
+                  //   color: Colors.blue,
+                  // ),
+                  // ListTile(
+                  //   onTap: () {
+                  //     _openGallery(context);
+                  //   },
+                  //   title: Text("Gallery"),
+                  //   leading: Icon(
+                  //     Icons.account_box,
+                  //     color: Colors.blue,
+                  //   ),
+                  // ),
+
                   Divider(
                     height: 1,
                     color: Colors.blue,
@@ -289,20 +314,20 @@ class _ClearanceCertificateState extends State<ClearanceCertificate> {
             content: SingleChildScrollView(
               child: ListBody(
                 children: [
-                  Divider(
-                    height: 1,
-                    color: Colors.blue,
-                  ),
-                  ListTile(
-                    onTap: () {
-                      _openGallery(context);
-                    },
-                    title: Text("Gallery"),
-                    leading: Icon(
-                      Icons.account_box,
-                      color: Colors.blue,
-                    ),
-                  ),
+                  // Divider(
+                  //   height: 1,
+                  //   color: Colors.blue,
+                  // ),
+                  // ListTile(
+                  //   onTap: () {
+                  //     _openGallery(context);
+                  //   },
+                  //   title: Text("Gallery"),
+                  //   leading: Icon(
+                  //     Icons.account_box,
+                  //     color: Colors.blue,
+                  //   ),
+                  // ),
                   Divider(
                     height: 1,
                     color: Colors.blue,

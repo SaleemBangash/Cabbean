@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:passenger/screens/broadcast.dart';
 import 'package:passenger/screens/click_help.dart';
 import 'package:passenger/screens/dashboard.dart';
+import 'package:passenger/screens/destination.dart';
 import 'package:passenger/screens/set_destination.dart';
 import 'package:passenger/widgets/app_bar.dart';
 
@@ -56,7 +57,7 @@ class _AcceptOfferState extends State<AcceptOffer> {
                             BorderRadius.circular(15.0)), //this right here,
                     backgroundColor: Color(0xff272525),
                     content: SizedBox(
-                      height: 190,
+                      height: 160,
                       child: Column(
                         children: [
                           SizedBox(
@@ -104,32 +105,32 @@ class _AcceptOfferState extends State<AcceptOffer> {
                               )
                             ],
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Divider(
-                            color: Colors.white,
-                            thickness: 1,
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.cancel,
-                                color: Theme.of(context).primaryColor,
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Text(
-                                "Cancel",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18),
-                              )
-                            ],
-                          ),
+                          // SizedBox(
+                          //   height: 10,
+                          // ),
+                          // Divider(
+                          //   color: Colors.white,
+                          //   thickness: 1,
+                          // ),
+                          // SizedBox(
+                          //   height: 10,
+                          // ),
+                          // Row(
+                          //   children: [
+                          //     Icon(
+                          //       Icons.cancel,
+                          //       color: Theme.of(context).primaryColor,
+                          //     ),
+                          //     SizedBox(
+                          //       width: 20,
+                          //     ),
+                          //     Text(
+                          //       "Cancel",
+                          //       style: TextStyle(
+                          //           color: Colors.white, fontSize: 18),
+                          //     )
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),
@@ -157,7 +158,7 @@ class _AcceptOfferState extends State<AcceptOffer> {
         //
 
         Positioned(
-          top: 90,
+          top: 120,
           left: 50,
           child: Text(
               "You have Accepted Ali's Offer\nHe will Arrive in 4 Minutes.\nPlease Get Ready",
@@ -717,22 +718,30 @@ class _AcceptOfferState extends State<AcceptOffer> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      height: sizeConfig!.height(0.040),
-                      width: sizeConfig!.width(0.35),
-                      decoration: BoxDecoration(
-                          border: Border.all(width: 1, color: Colors.white),
-                          borderRadius: BorderRadius.circular(20.0),
-                          color: Theme.of(context).primaryColor),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.call, color: Colors.white),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text("Call", style: TextStyle(color: Colors.white))
-                        ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PaymentDetails()));
+                      },
+                      child: Container(
+                        height: sizeConfig!.height(0.040),
+                        width: sizeConfig!.width(0.35),
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 1, color: Colors.white),
+                            borderRadius: BorderRadius.circular(20.0),
+                            color: Theme.of(context).primaryColor),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.call, color: Colors.white),
+                            SizedBox(
+                              width: 5.0,
+                            ),
+                            Text("Call", style: TextStyle(color: Colors.white))
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -989,7 +998,7 @@ class _AcceptOfferState extends State<AcceptOffer> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => AcceptOffer()));
+                                builder: (context) => ClickHelp()));
                       },
                       child: Container(
                         height: sizeConfig!.height(0.040),

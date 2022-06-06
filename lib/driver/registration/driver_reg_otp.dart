@@ -9,6 +9,7 @@ import 'package:otp_text_field/style.dart';
 // import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:passenger/drawer/new_registration.dart';
+import 'package:passenger/driver/registration/driver_registration.dart';
 import 'package:passenger/main.dart';
 import 'package:passenger/screens/dashboard.dart';
 import 'package:passenger/screens/pickup_one.dart';
@@ -63,9 +64,10 @@ class _DriverRegistrationOtpState extends State<DriverRegistrationOtp>
     return MyAppBar(
       leading: GestureDetector(
           onTap: (() {
-            Navigator.pop(
-              context,
-            );
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => DriverRegistrationScreen()));
           }),
           child: Icon(
             Icons.arrow_back,
@@ -161,7 +163,7 @@ class _DriverRegistrationOtpState extends State<DriverRegistrationOtp>
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => NewRegistration())),
+                              builder: (context) => DriverRegistration())),
                       title: "Verify",
                       borderRadius: BorderRadius.circular(25.0),
                     ),

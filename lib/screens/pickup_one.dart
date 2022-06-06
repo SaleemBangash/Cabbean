@@ -72,22 +72,36 @@ class PickupOne extends StatelessWidget {
           margin: EdgeInsets.all(20.0),
           child: Column(
             children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PickupOne()));
-                },
+              Row(
+                children: [
+                  Icon(
+                    Icons.home,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Text(
+                    'Shams Abad,Rwp',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: Row(
                   children: [
-                    Icon(
-                      Icons.home,
-                      color: Theme.of(context).primaryColor,
-                    ),
+                    Image.asset("assets/building.png"),
                     SizedBox(
                       width: 20,
                     ),
                     Text(
-                      'Shams Abad,Rwp',
+                      'F9 Markaz Islamabad',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -98,64 +112,56 @@ class PickupOne extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Image.asset("assets/building.png"),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    'F9 Markaz Islamabad',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  children: [
+                    Image.asset("assets/timer.png"),
+                    SizedBox(
+                      width: 20,
                     ),
-                  ),
-                ],
+                    Text(
+                      'F9 Markaz Islamabad',
+                      style: TextStyle(),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Image.asset("assets/timer.png"),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    'F9 Markaz Islamabad',
-                    style: TextStyle(),
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  children: [
+                    Image.asset("assets/timer.png"),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      'F9 Markaz Islamabad',
+                      style: TextStyle(),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Image.asset("assets/timer.png"),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    'F9 Markaz Islamabad',
-                    style: TextStyle(),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Image.asset("assets/timer.png"),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    'F9 Markaz Islamabad',
-                    style: TextStyle(),
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  children: [
+                    Image.asset("assets/timer.png"),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      'F9 Markaz Islamabad',
+                      style: TextStyle(),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
