@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'dart:ui';
-import 'package:passenger/driver/main_screen_online.dart';
+
 import 'package:slide_to_confirm/slide_to_confirm.dart';
 import 'package:flutter/material.dart';
 import 'package:passenger/screens/registration_screen.dart';
@@ -81,32 +81,32 @@ class _StartScreenState extends State<StartScreen> {
             ),
           ),
         ),
-        Positioned(
-          bottom: sizeConfig!.height(0.12),
-          left: sizeConfig!.width(0.12),
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ConfirmationSlider(
-                height: 54.0,
-                width: 270,
-                backgroundColor: Color(0xffbaa378),
-                foregroundColor: Colors.black87,
-                backgroundShape: BorderRadius.circular(10),
-                foregroundShape: BorderRadius.circular(16),
-                text: "Swipe To Driver",
-                textStyle: TextStyle(
-                    fontSize: 17,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-                onConfirmation: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => MainScreenOnline())),
-              ),
-            ),
-          ),
-        )
+        // Positioned(
+        //   bottom: sizeConfig!.height(0.12),
+        //   left: sizeConfig!.width(0.12),
+        //   child: Center(
+        //     child: Padding(
+        //       padding: const EdgeInsets.all(8.0),
+        //       child: ConfirmationSlider(
+        //         height: 54.0,
+        //         width: 270,
+        //         backgroundColor: Color(0xffbaa378),
+        //         foregroundColor: Colors.black87,
+        //         backgroundShape: BorderRadius.circular(10),
+        //         foregroundShape: BorderRadius.circular(16),
+        //         text: "Swipe To Driver",
+        //         textStyle: TextStyle(
+        //             fontSize: 17,
+        //             color: Colors.white,
+        //             fontWeight: FontWeight.bold),
+        //         onConfirmation: () => Navigator.push(
+        //             context,
+        //             MaterialPageRoute(
+        //                 builder: (context) => MainScreenOnline())),
+        //       ),
+        //     ),
+        //   ),
+        // )
       ]),
     );
   }

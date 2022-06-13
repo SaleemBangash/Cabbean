@@ -2,10 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:passenger/driver/main_screen_online.dart';
 
-import '../driver/accept_offer.dart';
-import '../driver/accept_offer_one.dart';
 import '../main.dart';
 
 class BottomBar extends StatefulWidget {
@@ -24,9 +21,9 @@ class _BottomBarState extends State<BottomBar> {
   // late final Widget? body;
   int _selectedIndex = 0;
   final List<Widget> screens = [
-    MainScreenOnline(),
-    AccepDriverOffer(),
-    acceptOfferOne()
+    // MainScreenOnline(),
+    // AccepDriverOffer(),
+    // acceptOfferOne()
     //Center(child: Text("Settings")),
   ];
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:passenger/driver/google_map/google_map_page.dart';
 
 import 'package:provider/provider.dart';
 
+import 'google_map_page.dart';
 import 'provider/location_provider.dart';
 
 class LandingMap extends StatelessWidget {
