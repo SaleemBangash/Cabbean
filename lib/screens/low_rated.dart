@@ -53,7 +53,8 @@ class _LowRatedState extends State<LowRated> {
               children: [
                 Text(
                   "Give a Rating",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(
+                      color: Theme.of(context).primaryColor, fontSize: 20),
                 ),
                 SizedBox(
                   height: 10,

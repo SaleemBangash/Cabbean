@@ -273,20 +273,16 @@ class _DashboardState extends State<Dashboard> {
                                                     Theme.of(context)
                                                         .primaryColor,
                                                 content: SizedBox(
-                                                  height: 20,
-                                                  width: 20,
-                                                  child: Column(
-                                                    children: [
-                                                      Center(
-                                                        child: Text(
-                                                            "Comfortable AC Ride",
-                                                            textAlign: TextAlign
-                                                                .center,
-                                                            style: TextStyle(
-                                                                color: Colors
-                                                                    .white)),
-                                                      ),
-                                                    ],
+                                                  height: 15,
+                                                  width: 10,
+                                                  child: Center(
+                                                    child: Text(
+                                                        "Comfortable AC Ride",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: TextStyle(
+                                                            color:
+                                                                Colors.white)),
                                                   ),
                                                 ),
                                               );
@@ -409,20 +405,16 @@ class _DashboardState extends State<Dashboard> {
                                                     Theme.of(context)
                                                         .primaryColor,
                                                 content: SizedBox(
-                                                  height: 25,
-                                                  child: Column(
-                                                    children: [
-                                                      Center(
-                                                        child: Text(
-                                                            "Economical Ride With Comfort",
-                                                            textAlign: TextAlign
-                                                                .center,
-                                                            style: TextStyle(
-                                                                fontSize: 16,
-                                                                color: Colors
-                                                                    .white)),
-                                                      ),
-                                                    ],
+                                                  height: 15,
+                                                  child: Center(
+                                                    child: Text(
+                                                        "Economical Ride With Comfort",
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: TextStyle(
+                                                            fontSize: 16,
+                                                            color:
+                                                                Colors.white)),
                                                   ),
                                                 ),
                                               );
@@ -547,21 +539,15 @@ class _DashboardState extends State<Dashboard> {
                                                       Theme.of(context)
                                                           .primaryColor,
                                                   content: SizedBox(
-                                                    height: 25,
-                                                    child: Column(
-                                                      children: [
-                                                        Center(
-                                                          child: Text(
-                                                              "Economical Ride With Comfort",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: TextStyle(
-                                                                  fontSize: 14,
-                                                                  color: Colors
-                                                                      .white)),
-                                                        ),
-                                                      ],
+                                                    height: 15,
+                                                    child: Center(
+                                                      child: Text(
+                                                          "Economical Ride With Comfort",
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .white)),
                                                     ),
                                                   ),
                                                 ),
@@ -724,9 +710,8 @@ class _DashboardState extends State<Dashboard> {
                                     height: 20,
                                   ),
                                   Text(
-                                      "Dear Abad\nCabbea welcomes you on board.Once\n "
-                                      "you pressed lets ride button the wait for discount",
-                                      textAlign: TextAlign.center,
+                                      "Dear Noman Cabbea welcomes you on board. Once you click Let's Ride button then please wait for Cabbean's Discount Offers to choose from",
+                                      textAlign: TextAlign.justify,
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 18)),
                                 ],
@@ -1370,9 +1355,8 @@ class _DashboardState extends State<Dashboard> {
                                   height: 20,
                                 ),
                                 Text(
-                                    "Dear Abad\nCabbea welcomes you on board. Once\n "
-                                    "you press lets ride button then wait for discount Offer",
-                                    textAlign: TextAlign.center,
+                                    "Dear Arif Cabbea welcomes you on board. Once you click Let's Ride button then please wait for Cabbean's Discount Offers to choose from",
+                                    textAlign: TextAlign.justify,
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 18)),
                               ],

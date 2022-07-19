@@ -56,7 +56,8 @@ class _RatingState extends State<Rating> {
               children: [
                 Text(
                   "Give a Rating",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(
+                      color: Theme.of(context).primaryColor, fontSize: 20),
                 ),
                 SizedBox(
                   height: 10,
@@ -276,6 +277,36 @@ class _RatingState extends State<Rating> {
                       SizedBox(width: 10),
                       Text(
                         "Change Returned at Once",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Row(
+                    children: [
+                      Checkbox(
+                        checkColor: Colors.black,
+                        side: BorderSide(color: Colors.white),
+                        activeColor: Theme.of(context).primaryColor,
+                        // shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(20)),
+                        value: aChecked,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            aChecked = value!;
+
+                            // bChecked = false;
+                            // cChecked = false;
+                            // dChecked = false;
+                            // eChecked = false;
+                          });
+                        },
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        "Good Conversation",
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     ],

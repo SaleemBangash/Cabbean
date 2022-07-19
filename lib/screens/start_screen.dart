@@ -45,22 +45,23 @@ class _StartScreenState extends State<StartScreen> {
                   ),
                 ],
                 image: DecorationImage(
-                    image: AssetImage("assets/driver.png"),
-                    fit: BoxFit.cover,
-                    colorFilter: ColorFilter.mode(
-                        Colors.black.withOpacity(0.2), BlendMode.dstATop))),
+                  image: AssetImage("assets/cabbean.jpeg"),
+                  fit: BoxFit.cover,
+                  // colorFilter: ColorFilter.mode(
+                  //     Colors.black.withOpacity(0.2), BlendMode.dstATop)
+                )),
           ),
         ),
         Positioned(
-          bottom: sizeConfig!.height(0.3),
-          left: sizeConfig!.height(0.15),
+          bottom: sizeConfig!.height(0.25),
+          left: sizeConfig!.height(0.10),
           child: Column(
             children: [
-              Image.asset("assets/cabbea.png"),
-              Text(
-                "Fare for Everyone",
-                style: TextStyle(fontSize: 17, color: Colors.white),
-              ),
+              Image.asset("assets/logo1.png", height: 250, width: 250),
+              // Text(
+              //   "Fare for Everyone",
+              //   style: TextStyle(fontSize: 17, color: Colors.white),
+              // ),
             ],
           ),
         ),
@@ -75,8 +76,9 @@ class _StartScreenState extends State<StartScreen> {
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Registration())),
                 title: "Let's Start",
-                borderRadius: BorderRadius.circular(25.0),
-                border: Border.all(width: 1, color: Colors.white),
+                borderRadius: BorderRadius.circular(5.0),
+                border: Border.all(
+                    width: 2, color: Color.fromARGB(255, 245, 237, 237)),
               ),
             ),
           ),

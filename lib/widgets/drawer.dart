@@ -7,8 +7,10 @@ import 'package:passenger/drawer/new_registration.dart';
 import 'package:passenger/drawer/request_history.dart';
 import 'package:passenger/screens/dashboard.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:passenger/screens/policies.dart';
 import 'package:passenger/screens/profile.dart';
 import 'package:passenger/screens/safety_screen.dart';
+import 'package:passenger/screens/term_condition.dart';
 
 class DrawerPage extends StatefulWidget {
   const DrawerPage({Key? key}) : super(key: key);
@@ -219,15 +221,17 @@ class _DrawerPageState extends State<DrawerPage> {
               ),
               listTile(
                   icon: Icons.copy_outlined,
-                  title: "Terms And Condition",
-                  onTap: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Dashboard()))),
+                  title: "Terms And Conditions",
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TermsConditions()))),
 
               listTile(
                 icon: FontAwesomeIcons.creativeCommons,
                 title: "In Ride Policy",
                 onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Dashboard())),
+                    MaterialPageRoute(builder: (context) => InRidePolicies())),
               ),
               // ListTile(
               //   leading: Icon(FontAwesomeIcons.lock),

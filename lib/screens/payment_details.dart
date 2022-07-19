@@ -45,8 +45,100 @@ class _PaymentDetailsState extends State<PaymentDetails> {
           padding: const EdgeInsets.only(right: 10),
           child: GestureDetector(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Dashboard()));
+              showDialog(
+                barrierDismissible: true,
+                // barrierColor: Theme.of(context).primaryColor,
+                context: context,
+                builder: (BuildContext context) {
+                  return Expanded(
+                    child: AlertDialog(
+                      // insetPadding: EdgeInsets.only(bottom: 350),
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.circular(15.0)), //this right here,
+                      backgroundColor: Color(0xff272525),
+                      content: SizedBox(
+                        height: 160,
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.call,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Text(
+                                  "Call to 15",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 18),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Divider(
+                              color: Colors.white,
+                              thickness: 1,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.location_on,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Text(
+                                  "Share live Location",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 18),
+                                )
+                              ],
+                            ),
+                            // SizedBox(
+                            //   height: 10,
+                            // ),
+                            // Divider(
+                            //   color: Colors.white,
+                            //   thickness: 1,
+                            // ),
+                            // SizedBox(
+                            //   height: 10,
+                            // ),
+                            // Row(
+                            //   children: [
+                            //     Icon(
+                            //       Icons.cancel,
+                            //       color: Theme.of(context).primaryColor,
+                            //     ),
+                            //     SizedBox(
+                            //       width: 20,
+                            //     ),
+                            //     Text(
+                            //       "Cancel",
+                            //       style: TextStyle(
+                            //           color: Colors.white, fontSize: 18),
+                            //     )
+                            //   ],
+                            // ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
             },
             child: Center(
               child: Text(
@@ -625,8 +717,8 @@ class _PaymentDetailsState extends State<PaymentDetails> {
                           topRight: Radius.circular(10.0))),
                   automaticallyImplyLeading: false,
                   title: Text(
-                    "Payment Details",
-                    style: TextStyle(color: Colors.white),
+                    "Your Bill",
+                    style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                   backgroundColor: Theme.of(context).primaryColor,
                 ),
@@ -639,7 +731,7 @@ class _PaymentDetailsState extends State<PaymentDetails> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 30),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
                               "Cabbean",
@@ -652,8 +744,9 @@ class _PaymentDetailsState extends State<PaymentDetails> {
                             ),
                             Text(
                               "Car No",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 18),
+                              style: TextStyle(
+                                  color: Theme.of(context).primaryColor,
+                                  fontSize: 18),
                             ),
                           ],
                         ),
@@ -1026,13 +1119,31 @@ class _PaymentDetailsState extends State<PaymentDetails> {
                       Center(
                         child: SizedBox(
                           width: sizeConfig!.width(0.62),
-                          height: 40,
+                          height: 35,
                           child: MySecondButton(
                               onTap: () => Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => Rating())),
-                              title: "Done",
+                              title: "Pay Via EasyPaisa",
+                              borderRadius: BorderRadius.circular(25.0),
+                              border:
+                                  Border.all(width: 1, color: Colors.white)),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Center(
+                        child: SizedBox(
+                          width: sizeConfig!.width(0.62),
+                          height: 35,
+                          child: MySecondButton(
+                              onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Rating())),
+                              title: "Pay Cash",
                               borderRadius: BorderRadius.circular(25.0),
                               border:
                                   Border.all(width: 1, color: Colors.white)),

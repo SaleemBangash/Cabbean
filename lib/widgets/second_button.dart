@@ -27,18 +27,20 @@ class MySecondButton extends StatelessWidget {
           height: 40,
           width: 255,
           decoration: BoxDecoration(
-              color: Color(0xffFF8F1E),
-              // borderRadius: const BorderRadius.all(
-              //   Radius.circular(20),
-              // ),
-              border: border,
-              borderRadius: borderRadius),
+            color: Color(0xffFF8F1E),
+            // borderRadius: const BorderRadius.all(
+            //   Radius.circular(20),
+            // ),
+            border:
+                Border.all(width: 2, color: Color.fromARGB(255, 245, 237, 237)),
+            borderRadius: BorderRadius.circular(5.0),
+          ),
           child: Center(
             child: Text(
               title,
               style: Theme.of(context).textTheme.bodyText2!.copyWith(
                   fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                  fontSize: 17,
                   color: Colors.white),
               softWrap: true,
               textAlign: TextAlign.center,

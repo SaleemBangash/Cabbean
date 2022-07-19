@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:passenger/screens/splash_screen.dart';
+// import 'package:passenger/screens/splash_screen.dart';
 import 'package:passenger/screens/start_screen.dart';
 import 'package:provider/provider.dart';
 

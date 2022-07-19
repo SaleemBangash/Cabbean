@@ -184,9 +184,9 @@ class _SetDestintionState extends State<SetDestintion> {
                             child: Container(
                                 decoration: BoxDecoration(
                                     color: Colors.grey,
-                                    borderRadius: BorderRadius.circular(15.0),
+                                    borderRadius: BorderRadius.circular(5.0),
                                     border: Border.all(
-                                        width: 1, color: Colors.white)),
+                                        width: 2, color: Colors.white)),
                                 width: sizeConfig!.width(0.25),
                                 height: sizeConfig!.height(0.035),
                                 child: Center(
@@ -206,9 +206,9 @@ class _SetDestintionState extends State<SetDestintion> {
                             child: Container(
                                 decoration: BoxDecoration(
                                     color: Theme.of(context).primaryColor,
-                                    borderRadius: BorderRadius.circular(15.0),
+                                    borderRadius: BorderRadius.circular(5.0),
                                     border: Border.all(
-                                        width: 1, color: Colors.white)),
+                                        width: 2, color: Colors.white)),
                                 width: sizeConfig!.width(0.25),
                                 height: sizeConfig!.height(0.035),
                                 child: Center(
